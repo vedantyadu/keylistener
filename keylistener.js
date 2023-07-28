@@ -1,6 +1,5 @@
 const { execFile } = require('child_process')
 
-
 function keyListener(callback) {
   const child = execFile('./dist/main.exe')
   child.stdout.on('data', (data) => {
@@ -9,4 +8,4 @@ function keyListener(callback) {
   return child
 }
 
-module.exports = (keyListener)
+module.exports = {keyListener}
